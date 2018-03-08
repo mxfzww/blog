@@ -21,5 +21,5 @@ url(r'^about/$', views.About, name='about'),
 url(r'^mood/$', views.Mood, name='mood'),
 url(r'^article/$', views.Article, name='article'),
 url(r'^board/$', views.Board, name='board'),
-url(r'^article_detail/$', views.Article_detail, name='article_detail'),
+url(r'^article_detail/(?P<pk>\d+)/$', views.Article_detail, name='article_detail'),
 ]
