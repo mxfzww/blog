@@ -23,6 +23,7 @@
 <link rel="stylesheet" type="text/css" href="/static/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
 <link rel="stylesheet" type="text/css" href="/static/css/common.css" />
 <link rel="stylesheet" type="text/css" href="/static/plugin/pifu/pifu.css" />
+<link rel="stylesheet" type="text/css" href="/static/plugin/wangEditor/css/wangEditor.min.css">
 {% block css %}{% endblock %}
     <!--[if lt IE 9]>
 <link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
@@ -33,7 +34,7 @@
 <header class="navbar-wrapper">
     <div class="navbar navbar-fixed-top">
         <div class="container cl">
-            <a class="navbar-logo hidden-xs" href="http://www.wfyvv.com">
+            <a class="navbar-logo hidden-xs" href="/">
                 <img class="logo" src="/static/img/logo.png" alt="zhao巍博客" />
             </a>
             <a class="logo navbar-logo-m visible-xs" href="/">zhao巍博客</a>
@@ -80,7 +81,7 @@
 {% block js %}{% endblock %}
 <script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
 <script type="text/javascript" src="/static/plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
-
+<script type="text/javascript" src="/static/plugin/wangEditor/js/wangEditor.min.js"></script>
 <script>
 $(function(){
 //幻灯片
@@ -140,6 +141,7 @@ $(function () {
             $(this).parents(".comment-body").find(".comment").remove();
         });
     });
+
 </script>
 
 </body>

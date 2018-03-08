@@ -34,11 +34,11 @@
 					<a href="{% url "blog_model:article_detail" pk=article.id %}" class="pic">
 						<link rel="stylesheet" type="text/css" href="/static/temp/art.jpg" alt="应该选" />
 					</a>
-					<h4 class="title"><a href="article_detail.html">{{ article.title }}</a></h4>
+					<h4 class="title"><a href="{% url "blog_model:article_detail" pk=article.id %}">{{ article.title }}</a></h4>
 					<div class="date_hits">
 						<span>{{ article.author }}</span>
-						<span>2017-02-24</span>
-						<span><a href="/article-lists/10.html">程序人生</a></span>
+						<span>{{ article.date_time }}</span>
+						<span><a href="{% url "blog_model:article_detail" pk=article.id %}">程序人生</a></span>
 						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
 						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span class="cy_cmt_count">20</span></p>
 					</div>
