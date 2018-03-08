@@ -14,7 +14,7 @@
 					<div class="panel panel-default  mb-20">
 						<div class="panel-body pt-10 pb-10">
 							<h2 class="c_titile">{{ article_one.title }}</h2>
-							<p class="box_c"><span class="d_time">发布时间：{{ article_one.date_time }}</span><span>编辑：<a href="mailto:2426595849@qq.com">{{ article_one.author }}</a></span><span>阅读（88646）</span></p>
+							<p class="box_c"><span class="d_time">发布时间：{{ article_one.date_time }}</span><span>编辑：<a href="mailto:2426595849@qq.com">{{ article_one.author }}</a></span><span>阅读（{{ article_one.view }}）</span></p>
 							{{ article_one.content }}
 
 							<div class="keybq">
@@ -43,7 +43,7 @@
                                 <div class="comment-main">
                                     <header class="comment-header">
                                         <div class="comment-meta"><a class="comment-author" href="#">赵巍</a>
-                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">2014-8-31 15:20</time>
+                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">{{ article_one.date_time }}</time>
                                         </div>
                                     </header>
                                     <div class="comment-body">
@@ -55,7 +55,7 @@
                                 <div class="comment-main">
                                     <header class="comment-header">
                                         <div class="comment-meta"><a class="comment-author" href="#">赵巍</a>
-                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">2014-8-31 15:20</time>
+                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">{{ article_one.date_time }}</time>
                                         </div>
                                     </header>
                                     <div class="comment-body">
