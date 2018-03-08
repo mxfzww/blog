@@ -1,62 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<title>赵巍个人博客 — 一个站在java开发之路上的草根程序员个人博客网站</title>
-<meta charset="utf-8">
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-<meta name="keywords" content="个人博客,王风宇个人博客,个人博客系统,赵巍博客,王风宇">
-<meta name="description" content="Lao王博客系统，一个站在java开发之路上的草根程序员个人博客网站。">
-<LINK rel="Bookmark" href="favicon.ico" >
-<LINK rel="Shortcut Icon" href="favicon.ico" />
-<!--[if lt IE 9]>
-<script type="text/javascript" src="/staticRes/js/html5shiv.js"></script>
-<script type="text/javascript" src="/staticRes/js/respond.min.js"></script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" href="/static/plugin/h-ui/css/H-ui.min.css" />
-<link rel="stylesheet" type="text/css" href="/static/plugin/Hui-iconfont/1.0.8/iconfont.min.css" />
-<link rel="stylesheet" type="text/css" href="/static/css/common.css" />
-<link rel="stylesheet" type="text/css" href="/static/plugin/pifu/pifu.css" />
-<!--[if lt IE 9]>
-<link href="/staticRes/lib/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } function showSide(){$('.navbar-nav').toggle();}</script>
-</head>
-<body>
-<header class="navbar-wrapper">
-    <div class="navbar navbar-fixed-top">
-        <div class="container cl">
-            <a class="navbar-logo hidden-xs" href="http://www.wfyvv.com">
-                <img class="logo" src="/static/img/logo.png" alt="Lao王博客" />
-            </a>
-            <a class="logo navbar-logo-m visible-xs" href="/">Lao王博客</a>
-            <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" onclick="showSide();">&#xe667;</a>
-            <nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
-                <ul class="cl">
-                    <li class="active"> <a href="{% url "blog_model:index" %}" data-hover="首页">首页</a> </li>
-                    <li> <a href="{% url "blog_model:about" %}" data-hover="关于我">关于我</a> </li>
-                    <li> <a href="{% url "blog_model:mood" %}" data-hover="碎言碎语">碎言碎语</a> </li>
-                    <li><a href="{% url "blog_model:article" %}" data-hover="学无止尽">学无止尽</a></li>
-                    <li> <a href="{% url "blog_model:board" %}" data-hover="留言板">留言板</a> </li>
-                </ul>
-            </nav>
-            <nav class="navbar-nav navbar-userbar hidden-xs hidden-sm " style="top: 0;">
-                <ul class="cl">
-                    <li class="userInfo dropDown dropDown_hover">
-                            <!--<a href="javascript:;" ><img class="avatar radius" src="http://q.qlogo.cn/qqapp/101388738/1CF8425D24660DB8C3EBB76C03D95F35/40" alt="丶似浅 "></a>
-                            <ul class="dropDown-menu menu radius box-shadow">
-                                <li><a href="/app/loginOut">退出</a></li>
-                            </ul>-->
-                            <a href="/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" ><img class="avatar size-S" src="/static/img/qq.jpg" title="登入">登入</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
-
+{% extends "base.html" %}
+{% block content %}
 <section class="container pt-20">
 	<!--<div class="Huialert Huialert-info"><i class="Hui-iconfont">&#xe6a6;</i>成功状态提示</div>-->
   <!--left-->
@@ -300,7 +243,7 @@
             </div>
             <div class="tab-category-item">
                 <ul class="index_recd">
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：王风宇</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：赵巍</li>
                     <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：JavaWeb开发</li>
                     <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a href="mailto:wfyv@qq.com">wfyv@qq.com</a></li>
                     <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：安徽 &middot; 合肥</li>
@@ -448,39 +391,4 @@
   </div>
   
 </section>
-<footer class="footer mt-20">
-    <div class="container-fluid" id="foot">
-        <p>Copyright &copy; 2016-2017 www.wfyvv.com <br>
-            <a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17002922号</a><br>
-        </p>
-    </div>
-</footer>
-<script type="text/javascript" src="/static/plugin/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="/static/plugin/layer/3.0/layer.js"></script>
-<script type="text/javascript" src="/static/plugin/h-ui/js/H-ui.min.js"></script>
-<script type="text/javascript" src="/static/plugin/pifu/pifu.js"></script>
-<script type="text/javascript" src="/static/js/common.js"></script>
-<script> $(function(){ $(window).on("scroll",backToTopFun); backToTopFun(); }); </script>
-<script type="text/javascript" src="/static/plugin/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
-
-<script>
-$(function(){
-//幻灯片
-jQuery(".slider_main .slider").slide({mainCell: ".bd ul", titCell: ".hd li", trigger: "mouseover", effect: "leftLoop", autoPlay: true, delayTime: 700, interTime: 2000, pnLoop: true, titOnClassName: "active"})
-//tips
-jQuery(".slideTxtBox").slide({titCell: ".hd ul", mainCell: ".bd ul", autoPage: true, effect: "top", autoPlay: true});
-//标签
-	$(".tags a").each(function(){
-		var x = 9;
-		var y = 0;
-		var rand = parseInt(Math.random() * (x - y + 1) + y);
-		$(this).addClass("tags"+rand)
-	});
-	
-	$("img.lazyload").lazyload({failurelimit : 3});
-});
-
-</script> 
-
-</body>
-</html>
+{% endblock %}
