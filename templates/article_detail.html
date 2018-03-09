@@ -15,7 +15,8 @@
 						<div class="panel-body pt-10 pb-10">
 							<h2 class="c_titile">{{ article_one.title }}</h2>
 							<p class="box_c"><span class="d_time">发布时间：{{ article_one.date_time }}</span><span>编辑：<a href="mailto:2426595849@qq.com">{{ article_one.author }}</a></span><span>阅读（{{ article_one.view }}）</span></p>
-							{{ article_one.content }}
+
+                            {{ article_one.content|safe }}
 
 							<div class="keybq">
 						    	<p><span>关键字</span>：<a class="label label-default">个人博客</a><a class="label label-default">阿里云</a><a class="label label-default">空间</a></p>
