@@ -13,6 +13,12 @@ class Tag(admin.ModelAdmin):
 
 @admin.register(Article)
 class Article(admin.ModelAdmin):
+    class Media:
+        js = (
+            '/static/js/kindeditor/kindeditor-all.js',
+            '/static/js/kindeditor/lang/zh_CN.js',
+            '/static/js/kindeditor/config.js'
+        )
     pass
 
 @admin.register(Category)
