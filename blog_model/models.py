@@ -23,6 +23,7 @@ class Article(models.Model):
     digest = models.TextField(blank=True, null=True)  # 文章摘要
     author = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=u'作者', on_delete=models.CASCADE)
     view = models.BigIntegerField(default=0)  # 阅读数
+    tj = models.BigIntegerField(default=0)  # 阅读数
     comment = models.BigIntegerField(default=0)  # 评论数
     picture = models.CharField(max_length=200)  # 标题图片地址
     tag = models.ManyToManyField(Tag)  # 标签

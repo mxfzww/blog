@@ -101,31 +101,17 @@
 			</div>
 			<div class="tab-category-item">
 				<ul class="index_recd">
+                    {% for list in article_list_tj %}
 					<li>
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
+						<a href="{% url "blog_model:article_detail" pk=list.id %}">{{ list.title }}</a>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
 					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
+                    {% endfor %}
 				</ul>
 			</div>
 		</div>
 
-					<!--图片-->
+					<!--
 		<div class="bg-fff box-shadow radius mb-20">
 			<div class="tab-category">
 				<a href=""><strong>扫我关注</strong></a>
@@ -133,7 +119,7 @@
 			<div class="tab-category-item">
 				<img data-original="/static/temp/gg.jpg" class="img-responsive lazyload" alt="响应式图片">
 			</div>
-		</div>
+		</div>-->
 
 				</div>
 			</div>

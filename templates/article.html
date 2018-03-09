@@ -42,7 +42,7 @@
   <!--right-->
   <div class="col-sm-3 col-md-3 mt-20">
 
-  	<!--导航-->
+  	<!--
   	<div class="panel panel-primary mb-20">
 			<div class="panel-body">
 				<input class="btn btn-primary radius nav-btn" type="button" value="python">
@@ -51,7 +51,7 @@
 				<input class="btn btn-primary-outline radius nav-btn" type="button" value="服务域名">
 			</div>
 		</div>
-
+-->
   	<!--热门推荐-->
   	<div class="bg-fff box-shadow radius mb-20">
 			<div class="tab-category">
@@ -59,31 +59,17 @@
 			</div>
 			<div class="tab-category-item">
 				<ul class="index_recd">
+                    {% for list in article_list_tj %}
 					<li>
-						<a href="#">阻止a标签href默认跳转事件</a>
+						<a href="{% url "blog_model:article_detail" pk=list.id %}">{{ list.title }}</a>
 						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
 					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
-					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
-					</li>
+                    {% endfor %}
 				</ul>
 			</div>
 		</div>
 
-<!--标签-->
+<!--
 		<div class="bg-fff box-shadow radius mb-20">
 			<div class="tab-category">
 				<a href=""><strong>标签云</strong></a>
@@ -92,6 +78,7 @@
 				<div class="tags"> <a href="http://www.h-ui.net/">H-ui前端框架</a> <a href="http://www.h-ui.net/websafecolors.shtml">Web安全色</a> <a href="http://www.h-ui.net/Hui-4.4-Unslider.shtml">jQuery轮播插件</a> <a href="http://idc.likejianzhan.com/vhost/korea_hosting.php">韩国云虚拟主机</a> <a href="http://www.h-ui.net/bug.shtml">IEbug</a> <a href="http://www.h-ui.net/site.shtml">IT网址导航</a> <a href="http://www.h-ui.net/icon/index.shtml">网站常用小图标</a> <a href="http://www.h-ui.net/tools/jsformat.shtml">web工具箱</a> <a href="http://www.h-ui.net/bg/index.shtml">网站常用背景素材</a> <a href="http://www.h-ui.net/yuedu/chm.shtml">H-ui阅读</a> <a href="http://www.h-ui.net/easydialog-v2.0/index.html">弹出层插件</a> <a href="http://www.h-ui.net/SuperSlide2.1/demo.html">SuperSlide插件</a> <a href="http://www.h-ui.net/TouchSlide1.1/demo.html">TouchSlide</a></div>
 			</div>
 		</div>
+		-->
   </div>
 
 </section>
