@@ -3,9 +3,13 @@ Django搭建博客
 使用Django快速搭建博客
 
 要求
+
 Python: 2.X
+
 Django: 1.10.x
+
 Mysql
+
 示例博客：http://python.fendous.cn/blog
 特点
 博客文章 markdown 渲染，代码高亮
