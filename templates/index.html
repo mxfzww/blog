@@ -39,7 +39,7 @@
 						<span>{{ article.author }}</span>
 						<span>{{ article.date_time }}</span>
 						<span><a href="{% url "blog_model:article_detail" pk=article.id %}">{{ article.author }}</a></span>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> {{ article.view }}° </p>
 						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span class="cy_cmt_count">20</span></p>
 					</div>
 					<div class="desc">{{ article.content|safe }}</div>

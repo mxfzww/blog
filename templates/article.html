@@ -25,11 +25,11 @@
 					<div class="date_hits">
 						<span>{{ artile.author }}</span>
 						<span>{{ artile.date_time }}</span>
-						<span><a href="{% url "blog_model:article_detail" pk=artile.id%}">程序人生</a></span>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
+						<span><a href="{% url "blog_model:article_detail" pk=artile.id%}">{{ artile.author }}</a></span>
+						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> {{ artile.view }}° </p>
 						<p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span class="cy_cmt_count">20</span></p>
 					</div>
-					<div class="desc">{{ artile.content }}</div>
+					<div class="desc">{{ artile.content|safe }}</div>
 				</li>
                 {% endfor %}
 				</ul>
