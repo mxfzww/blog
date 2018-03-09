@@ -26,14 +26,25 @@ def Article(request):
 def Board(request):
 
     if request.method == "POST":
-        Comment.objects.create(comment=request.POST.get("comment"),user_name="root")
+        Comment.objects.create(comment=request.POST.get("comment"),user_name="root",source_id=0)
 
-    Commentdata = Comment.objects.all().order_by("-create_time")[0:5]
+    Commentdata = Comment.objects.all().filter(source_id=0).order_by("-create_time")[0:5]
     return render(request, "board.html",{"Commentdata":Commentdata})
     #return render_to_response("board.html",locals())
 
 #详情页
 def Article_detail(request,pk):
+
+    if request.method == "POST":
+        Comment.objects.create(comment=request.POST.get("comment"),user_name="root",source_id=request.POST.get("id"))
+
+    #文章信息
     article_one = Articles.objects.get(id=pk)
+    #评论信息
+
     article_one.viewed()
-    return render_to_response("article_detail.html",locals())
+
+    commonts = Comment.objects.all().filter(source_id=pk).order_by("-create_time")[0:5]
+
+    #return render("article_detail.htm", {"article_one": article_one})
+    return render(request,"article_detail.html", {"article_one": article_one,"commonts":commonts})

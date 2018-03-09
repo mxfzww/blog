@@ -38,44 +38,43 @@
 						<div class="panel-body">
 							<div class="panel-body" style="margin: 0 3%;">
                     <div class="mb-20">
+                        {% for list in commonts %}
                     	<ul class="commentList">
                             <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://qzapp.qlogo.cn/qzapp/101388738/1CF8425D24660DB8C3EBB76C03D95F35/100"></i></a>
                                 <div class="comment-main">
                                     <header class="comment-header">
-                                        <div class="comment-meta"><a class="comment-author" href="#">赵巍</a>
-                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">{{ article_one.date_time }}</time>
+                                        <div class="comment-meta"><a class="comment-author" href="#">{{ list.user_name }}</a>
+                                            <time title="{{ list.create_time }} 下午3:20" datetime="{{ list.create_time }}" class="f-r">{{ list.create_time }}</time>
                                         </div>
                                     </header>
                                     <div class="comment-body">
-                                        <p> 是的</p>
+                                        {{ list.comment|safe }}
                                     </div>
                                 </div>
                             </li>
-                            <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://qzapp.qlogo.cn/qzapp/101388738/696C8A17B3383B88804BA92ECBAA5D81/100"></i></a>
-                                <div class="comment-main">
-                                    <header class="comment-header">
-                                        <div class="comment-meta"><a class="comment-author" href="#">赵巍</a>
-                                            <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">{{ article_one.date_time }}</time>
-                                        </div>
-                                    </header>
-                                    <div class="comment-body">
-                                        <p> +1</p>
-                                    </div>
-                                </div>
-                            </li>
-
+                        {% endfor %}
                         </ul>
 
                     </div>
+
                     <div class="line"></div>
                     <!--用于评论-->
+
+                                <form action="#" method="post" id="sub">
+                    {% csrf_token %}
+                                    <input type="hidden" value="{{ article_one.id }}" name="id">
                     <div class="mt-20" id="ct">
                         <div id="err" class="Huialert Huialert-danger hidden radius">成功状态提示</div>
+
                         <textarea id="textarea1" name="comment" style="height:200px;" placeholder="看完不留一发？"> </textarea>
                         <div class="text-r mt-10">
-                            <button onclick="getPlainTxt()" class="btn btn-primary radius" > 发表评论</button>
+                            <button onclick="$('#sub').submit()" class="btn btn-primary radius" > 发表评论</button>
                         </div>
                     </div>
+                                     </form>
+
+
+
                     <!--用于回复-->
                     <div class="comment hidden mt-20">
                         <div id="err2" class="Huialert Huialert-danger hidden radius">成功状态提示</div>
