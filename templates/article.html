@@ -19,7 +19,7 @@
                 {% for artile in article_sort2 %}
 				<li class="index_arc_item">
 					<a href="{% url "blog_model:article_detail" pk=artile.id%}" class="pic">
-						<link rel="stylesheet" type="text/css" href="/static/temp/art.jpg" alt="应该选" />
+						 <img src="/static/temp/art.jpg">
 					</a>
 					<h4 class="title"><a href="{% url "blog_model:article_detail" pk=artile.id%}">{{ artile.title }}</a></h4>
 					<div class="date_hits">
