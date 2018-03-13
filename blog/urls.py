@@ -19,6 +19,6 @@ from blog_model import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^blog/', include('blog_model.urls', namespace='blog_model')),
-    url(r'^blog/$', views.Index, name='index'),
-    url(r'^$', views.Index),
+    url(r'^blog/$', views.Indexview.as_view(), name='index'),
+    url(r'^$', views.Indexview.as_view(), name='index'),
 ]

@@ -15,7 +15,7 @@
 					    </div>
 					    <div class="cd-timeline-content">
 					        <h4>{{ article.title }}</h4>
-					        <p>{{ article.content|safe }}</p>
+					        <p>{{ article.content|safe|slice:"200" }}</p>
 					        <a href="{% url "blog_model:article_detail" pk=article.id %}" class="f-r"><input class="btn btn-success size-S" type="button" value="更多"></a>
 					        <span class="cd-date">{{ article.date_time }}</span>
 					    </div>

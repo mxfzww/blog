@@ -16,10 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from blog_model import views
 urlpatterns = [
-url(r'^index/$', views.Index, name='index'),
-url(r'^about/$', views.About, name='about'),
-url(r'^mood/$', views.Mood, name='mood'),
-url(r'^article/$', views.Article, name='article'),
-url(r'^board/$', views.Board, name='board'),
-url(r'^article_detail/(?P<pk>\d+)/$', views.Article_detail, name='article_detail'),
+url(r'^index/$', views.Indexview.as_view(), name='index'),
+url(r'^about/$', views.Aboutview.as_view(), name='about'),
+url(r'^mood/$', views.Moodview.as_view(), name='mood'),
+url(r'^article/$', views.Articleview.as_view(), name='article'),
+url(r'^board/$', views.Boardview.as_view(), name='board'),
+url(r'^article_detail/(?P<pk>\d+)/$', views.Article_detailview.as_view(), name='article_detail'),
 ]
