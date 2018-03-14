@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render,render_to_response
 from blog_model.models import Article as Articles,Comment
 from django.views.decorators import csrf
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,HttpResponse
 from django.views.generic.list import ListView
 
 # 公共基类
@@ -23,6 +23,7 @@ class Commonmethod(ListView):
 #首页
 class Indexview(Commonmethod):
     def get(self, request):
+
         article_list = self.article_list_category(1)
         article_list_tj = self.article_list_tj(1)
         aritcle_list_view = self.article_list_ph()

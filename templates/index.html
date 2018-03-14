@@ -27,6 +27,8 @@
 			</div>
 		</div>
 		<div class="art_content">
+        {% load pagination_tags %}
+  {% autopaginate article_list 2 %}
 			<ul class="index_arc">
                 {% for article in article_list %}
 				<li class="index_arc_item">
@@ -47,10 +49,13 @@
                 {% endfor %}
           
 				</ul>
+        {% paginate %}
+        <!--
   		<div class="text-c mb-20" id="moreBlog">
 	        <a class="btn  radius btn-block " href="javascript:;" onclick="moreBlog();">点击加载更多</a>
 	        <a class="btn  radius btn-block hidden" href="javascript:;">加载中……</a>
 	    </div>
+	    -->
 		</div>
   </div>
   

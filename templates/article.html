@@ -13,7 +13,8 @@
   <!--left-->
   <div class="col-sm-9 col-md-9 mt-20">
 
-
+{% load pagination_tags %}
+  {% autopaginate article_sort2 2 %}
   	<!--article list-->
 			<ul class="index_arc">
                 {% for artile in article_sort2 %}
@@ -33,10 +34,12 @@
 				</li>
                 {% endfor %}
 				</ul>
+  {% paginate %}
+  <!--
   		<div class="text-c mb-20" id="moreBlog">
             <a class="btn  radius btn-block " href="javascript:;" onclick="moreBlog('${blogType.id}','${tag.name}');">点击加载更多</a>
             <a class="btn  radius btn-block hidden" href="javascript:;">加载中……</a>
-        </div>
+        </div>-->
   </div>
 
   <!--right-->
