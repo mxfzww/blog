@@ -12,6 +12,8 @@ Mysql
 
 示例博客：http://python.fendous.cn/blog
 
+
+
 特点
 
 两种皮肤自由切换
@@ -26,7 +28,11 @@ Mysql
 
 留言板
 
+
+
 安装
+
+安装依赖 pip install -r requirements.txt
 
 setting.py配置自己的数据库
 
