@@ -33,6 +33,7 @@ setting.py配置自己的数据库
 python manage.py makemigrations blog
 python manage.py migrate
 python manage.py runserver
+执行爬虫程序 ./reptile.py  获取测试数据
 ```
 
 浏览器中打开<http://127.0.0.1:8000/>即可访问

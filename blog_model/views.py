@@ -18,7 +18,7 @@ class Commonmethod(ListView):
 
     # 分类列表
     def article_list_category(self, pk):
-        return Articles.objects.filter(category_id=pk).all()[0:5]
+        return Articles.objects.filter(category_id=pk).all()
 
 #首页
 class Indexview(Commonmethod):
